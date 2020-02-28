@@ -6,11 +6,16 @@ class DivideByZeroError extends Error {
     }
 }
 
-try {
-    throw new DivideByZeroError();
-} catch (error) {
+function divide (a, b) {
+  try {
+    if (b === 0) throw new DivideByZeroError();
+  }
+  catch (error) {
     console.log('oops')
 }
+}
+
+divide (1, 0)
 
 
 setTimeout(function() {

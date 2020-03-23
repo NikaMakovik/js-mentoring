@@ -1,4 +1,5 @@
 import { ElectronicsPage } from "./electronicsPage";
+import { elementWait } from "../utils/waiters";
 
 const YANDEX = 'https://market.yandex.by/';
 
@@ -17,19 +18,4 @@ export class YandexPage{
         electronics.click();
         return new ElectronicsPage();
     }
-}
-
-export function elementWait(elem, maxWaitTime = 10000) {
-    elem.isDisplayed()
-    .then(
-        null,
-        error => {
-            if (maxWaitTime > 0) {
-                browser.sleep(1000);
-                elementWait(elem, maxWaitTime-1000);
-            }
-            else if(maxWaitTime <= 0) throw error;
-        });
-    
-    // browser.wait(() => elem.isDisplayed(), delay)
 }

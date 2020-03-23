@@ -1,5 +1,5 @@
-import { MobilePhonesPage } from "./mobilePhones";
-import { elementWait } from "./yandexPage";
+import { MobilePhonesPage } from "./mobilePhonesPage";
+import { elementWait } from "../utils/waiters";
 
 const mobilePhones = element(by.xpath('//li//a[contains(text(), "Мобильные телефоны")]'));
 

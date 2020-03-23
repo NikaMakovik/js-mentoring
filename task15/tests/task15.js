@@ -1,4 +1,4 @@
-import {YandexPage} from './yandexPage.js';
+import {YandexPage} from '../pages/yandexPage.js';
 
 const text = '1000';
 

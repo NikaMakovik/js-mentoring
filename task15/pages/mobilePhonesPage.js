@@ -1,4 +1,4 @@
-import { elementWait } from "./yandexPage";
+import { elementWait } from "../utils/waiters";
 
 const checkbox = element(by.css('#local-offers-first'));
 const delivery = element(by.xpath('//span[contains(text(), "С учётом доставки курьером")]'));
